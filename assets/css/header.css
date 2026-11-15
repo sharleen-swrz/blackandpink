@@ -1,0 +1,127 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: min(var(--content-width), calc(100% - 2 * var(--page-gutter)));
+  margin: 20px auto 0;
+  border-radius: 80px;
+  padding: 5px clamp(16px, 3vw, 40px);
+  background: var(--glass-background);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+  font-size: clamp(30px, 3.4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1.2;
+}
+
+.black {
+  color: var(--pink);
+}
+
+.amp {
+  background: linear-gradient(90deg, var(--logo-black) 50%, var(--pink) 50%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: Georgia,serif;
+  font-weight: 400;
+  letter-spacing: -3px;
+}
+
+.pink {
+  color: var(--logo-black);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(18px, 3vw, 42px);
+  margin-top: 0;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: .06em;
+  padding: 12px 0;
+  position: relative;
+}
+
+nav a[aria-current="location"],
+nav a:hover {
+  color: #ff73b2;
+}
+
+@media(max-width:760px) {
+  header {
+    gap: 14px;
+  }
+
+  .logo {
+    letter-spacing: -3px;
+    gap: 10px;
+  }
+
+  nav {
+    gap: 18px;
+    margin-top: 0;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+}
+
+.home header {
+  position: fixed;
+  inset: 0 0 auto;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: none;
+}
+
+@media (max-width: 760px) {
+  .logo {
+    font-size: 32px;
+    gap: 6px;
+    letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+}

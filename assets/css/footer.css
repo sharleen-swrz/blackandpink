@@ -1,0 +1,28 @@
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 56px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .05em;
+}
+
+@media(max-width:760px) {
+  footer {
+    padding: 22px;
+    line-height: 1.7;
+  }
+}
+
+.footer-credit {
+  font-size: inherit;
+  text-align: center;
+}
+
+.footer-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: inherit;
+}
