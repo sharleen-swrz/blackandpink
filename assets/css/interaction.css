@@ -1,0 +1,49 @@
+/* Standarddarstellung, unter anderem für Firefox. */
+html,
+body {
+  scrollbar-color: var(--pink) var(--paper);
+  scrollbar-width: thin;
+}
+
+/* In WebKit-/Chromium-Browsern die Scrollleiste direkt gestalten.
+   scrollbar-color: auto verhindert, dass diese Regeln übersteuert werden. */
+@supports selector(::-webkit-scrollbar) {
+  html,
+  body {
+    scrollbar-color: auto;
+    scrollbar-width: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--paper);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--pink);
+    border-radius: 80px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--paper);
+  }
+}
+
+@media (forced-colors: active) {
+  html,
+  body {
+    scrollbar-color: auto;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ButtonText;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: Canvas;
+  }
+}
