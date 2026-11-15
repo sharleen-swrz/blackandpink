@@ -89,3 +89,10 @@
     transition: none;
   }
 }
+
+@media (max-width: 760px) {
+  .hero-image {
+    filter: grayscale(1);
+    object-position: center;
+  }
+}

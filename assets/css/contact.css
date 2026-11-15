@@ -12,6 +12,7 @@
 
 .contact-layout h3 {
   margin-top: 0;
+  line-height: 1.2;
 }
 
 .contact-form {
@@ -196,4 +197,28 @@
   width: 28px;
   height: 28px;
   object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .contact-widget {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    left: auto;
+    right: calc(12px + env(safe-area-inset-right));
+    bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 760px) {
+  .whatsapp-link {
+    width: 38px;
+    height: 38px;
+    padding: 7px;
+  }
+
+  .whatsapp-link img {
+    width: 24px;
+    height: 24px;
+  }
 }
